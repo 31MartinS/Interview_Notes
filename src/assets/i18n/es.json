@@ -1,0 +1,95 @@
+{
+  "nav": {
+    "hero": "INICIO",
+    "learning1": "ALCANCE REGIONAL",
+    "learning2": "SOFTWARE Y CIENCIA ABIERTA",
+    "learning3": "EXPERIENCIA INTEGRAL",
+    "closing": "CIERRE",
+    "menu": "MENÚ",
+    "close": "CERRAR"
+  },
+  "hero": {
+    "title": "Lo que aprendí sobre IGNITE",
+    "ctaStart": "EXPLORAR APRENDIZAJES",
+    "collageCaption1": "Colaboración educativa y científica",
+    "collageCaption2": "Conocimiento y tecnología abierta"
+  },
+  "connect": {
+    "number": "01",
+    "title": "ALCANCE REGIONAL",
+    "body": "Ignite tiene presencia y alcance regional. No trabaja únicamente con clientes de un país, sino que colabora con diferentes organizaciones, especialmente dentro del ámbito educativo y científico, adaptando sus soluciones a distintos clientes y contextos.",
+    "highlights": [
+      {
+        "id": "presencia",
+        "label": "Presencia regional",
+        "caption": "Colaboración más allá de un solo país"
+      },
+      {
+        "id": "sectores",
+        "label": "Ámbito educativo y científico",
+        "caption": "Trabajo conjunto con diversas organizaciones"
+      },
+      {
+        "id": "adaptacion",
+        "label": "Soluciones adaptadas",
+        "caption": "Respuesta a distintos clientes y contextos"
+      }
+    ],
+    "photo1Caption": "Colaboración con organizaciones educativas y científicas",
+    "photo2Caption": "Soluciones adaptadas a múltiples contextos regionales"
+  },
+  "open": {
+    "number": "02",
+    "title": "SOFTWARE Y CIENCIA ABIERTA",
+    "body": "Ignite apuesta por el software de código abierto y la ciencia abierta. Trabaja con plataformas desarrolladas con tecnologías como Angular y Laravel, y promueve el acceso, la gestión y la divulgación del conocimiento científico mediante herramientas tecnológicas.",
+    "highlights": [
+      {
+        "id": "codigo",
+        "label": "Código abierto y ciencia abierta",
+        "caption": "Impulso a plataformas tecnológicas abiertas"
+      },
+      {
+        "id": "tecnologias",
+        "label": "Angular y Laravel",
+        "caption": "Desarrollo de plataformas con tecnologías modernas"
+      },
+      {
+        "id": "conocimiento",
+        "label": "Conocimiento científico",
+        "caption": "Acceso, gestión y divulgación mediante tecnología"
+      }
+    ],
+    "photo1Caption": "Gestión y divulgación del conocimiento científico",
+    "photo2Caption": "Plataformas desarrolladas con Angular y Laravel"
+  },
+  "empower": {
+    "number": "03",
+    "title": "EXPERIENCIA INTEGRAL DEL CLIENTE",
+    "body": "El trabajo de Ignite va más allá del desarrollo de software. También incluye acompañamiento, capacitación, soporte técnico y comunicación con los clientes, además de actividades de marketing, divulgación y presentación de soluciones mediante seminarios web.",
+    "highlights": [
+      {
+        "id": "acompanamiento",
+        "label": "Acompañamiento y capacitación",
+        "caption": "Formación y cercanía con cada cliente"
+      },
+      {
+        "id": "soporte",
+        "label": "Soporte técnico y comunicación",
+        "caption": "Atención continua y diálogo directo"
+      },
+      {
+        "id": "divulgacion",
+        "label": "Marketing y seminarios web",
+        "caption": "Divulgación y presentación de soluciones"
+      }
+    ],
+    "photo1Caption": "Acompañamiento, capacitación y presentación de soluciones",
+    "photo2Caption": "Soporte técnico, comunicación y seminarios web"
+  },
+  "closing": {
+    "gratitudeTitle": "Agradecimiento a Laura",
+    "gratitudeText": "Gracias a Laura por compartir esta conversación y permitir conocer de cerca el trabajo de Ignite.",
+    "signatureAuthor": "Por:",
+    "backToTop": "VOLVER ARRIBA"
+  }
+}

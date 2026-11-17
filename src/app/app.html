@@ -1,0 +1,55 @@
+<!-- Global Editorial Paper & Photocopy Grain Overlay -->
+<div class="paper-grain-overlay" aria-hidden="true"></div>
+
+<!-- Fixed Editorial Navigation Masthead & Instant ES/EN Switcher -->
+<app-navbar
+  [activeSection]="activeSection()"
+  [scrollProgress]="scrollProgress()"
+  (navigateSection)="scrollToSection($event)" />
+
+<!-- Side Vertical Spread Progress Indicator Rail -->
+<aside class="spread-rail" aria-label="Editorial Progress">
+  <div class="rail-header">
+    <strong>{{ getActiveSpreadIndex() }} / 04</strong>
+  </div>
+  <div class="rail-dots">
+    @for (item of sectionOrder; track item.id) {
+      <button
+        type="button"
+        class="rail-dot-btn"
+        [class.active]="activeSection() === item.id"
+        (click)="scrollToSection(item.id)"
+        [title]="item.num">
+        <span class="dot-num">{{ item.num }}</span>
+      </button>
+    }
+  </div>
+</aside>
+
+<!-- Single-Page Editorial Zine Narrative -->
+<main class="zine-main">
+  <!-- 00. HERO SPREAD -->
+  <div id="hero">
+    <app-hero (startJourney)="scrollToSection($event)" />
+  </div>
+
+  <!-- 01. ALCANCE REGIONAL -->
+  <div id="connect">
+    <app-connect-section />
+  </div>
+
+  <!-- 02. SOFTWARE Y CIENCIA ABIERTA -->
+  <div id="open">
+    <app-open-section />
+  </div>
+
+  <!-- 03. EXPERIENCIA INTEGRAL DEL CLIENTE -->
+  <div id="empower">
+    <app-empower-section />
+  </div>
+
+  <!-- 04. CLOSING -->
+  <div id="closing">
+    <app-closing-section (navigateTo)="scrollToSection($event)" />
+  </div>
+</main>

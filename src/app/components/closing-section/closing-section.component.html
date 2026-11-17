@@ -1,0 +1,52 @@
+<footer class="closing-spread editorial-grid-navy">
+  <div class="closing-container">
+    <!-- Three Learnings Quick Reference Strip -->
+    <div class="summary-triptych">
+      <button type="button" class="triptych-card" (click)="onJumpToPillar('connect')">
+        <span class="triptych-title">{{ i18n.t().connect.title }}</span>
+      </button>
+
+      <button type="button" class="triptych-card" (click)="onJumpToPillar('open')">
+        <span class="triptych-title">{{ i18n.t().open.title }}</span>
+      </button>
+
+      <button type="button" class="triptych-card" (click)="onJumpToPillar('empower')">
+        <span class="triptych-title">{{ i18n.t().empower.title }}</span>
+      </button>
+    </div>
+
+    <!-- Dual Editorial Colophon: Gratitude to Laura + Signature of Martín Suquillo -->
+    <div class="colophon-dual-grid">
+      <article class="laura-gratitude-card">
+        <div class="masking-tape tape-laura"></div>
+        <h3 class="gratitude-title">{{ i18n.t().closing.gratitudeTitle }}</h3>
+        <p class="gratitude-text">
+          {{ i18n.t().closing.gratitudeText }}
+        </p>
+      </article>
+
+      <article class="signature-colophon-card">
+        <div class="masking-tape-orange tape-sig"></div>
+
+        <div class="author-block">
+          <h4 class="author-display-name">{{ i18n.t().closing.signatureAuthor }}</h4>
+          <div class="hand-signature-box">
+            <span class="hand-sig-script">Martín Suquillo</span>
+            <svg class="sig-underline" viewBox="0 0 220 22" fill="none" aria-hidden="true">
+              <path d="M4 15 C 65 4, 145 18, 214 6" stroke="#FF5416" stroke-width="3" stroke-linecap="round"/>
+            </svg>
+          </div>
+        </div>
+
+        <div class="colophon-actions">
+          <button
+            type="button"
+            class="back-top-btn"
+            (click)="onBackToTop()">
+            {{ i18n.t().closing.backToTop }}
+          </button>
+        </div>
+      </article>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,169 @@
+.closing-spread {
+  position: relative;
+  color: var(--paper-cream);
+  padding: clamp(4.5rem, 6vw, 6rem) 0;
+  overflow: hidden;
+}
+
+.closing-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 clamp(1.5rem, 4vw, 4.5rem);
+}
+
+@media (min-width: 1281px) {
+  .closing-container {
+    padding-right: 5.5rem;
+  }
+}
+
+.summary-triptych {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin-bottom: 3.5rem;
+}
+
+.triptych-card {
+  display: flex;
+  align-items: center;
+  background-color: var(--paper-ivory);
+  color: var(--ink-navy);
+  border: 2.5px solid var(--ink-navy);
+  box-shadow: 6px 6px 0 var(--ignite-orange);
+  padding: 1.15rem 1.35rem;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.triptych-card:hover {
+  background-color: var(--ignite-orange);
+  color: var(--paper-ivory);
+  box-shadow: 7px 7px 0 var(--paper-cream);
+  transform: translateY(-2px);
+}
+
+.triptych-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.05rem, 1.3vw, 1.28rem);
+  letter-spacing: 0.03em;
+}
+
+/* ==========================================================================
+   DUAL COLOPHON: LAURA GRATITUDE + MARTÍN SUQUILLO SIGNATURE
+   ========================================================================== */
+
+.colophon-dual-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 2.5rem;
+}
+
+.laura-gratitude-card {
+  position: relative;
+  background-color: var(--paper-ivory);
+  color: var(--ink-navy);
+  border: 2.5px solid var(--paper-cream);
+  box-shadow: 9px 9px 0 var(--ignite-orange);
+  padding: 2.25rem;
+  transform: rotate(-0.8deg);
+}
+
+.tape-laura {
+  top: -13px;
+  left: 32px;
+  transform: rotate(-3deg);
+}
+
+.gratitude-title {
+  font-family: var(--font-syne);
+  font-size: 1.65rem;
+  font-weight: 800;
+  margin: 0 0 0.85rem;
+  color: var(--ink-navy);
+}
+
+.gratitude-text {
+  font-size: 1.05rem;
+  line-height: 1.68;
+  color: var(--cobalt-dark);
+  margin: 0;
+}
+
+.signature-colophon-card {
+  position: relative;
+  background-color: var(--cobalt-dark);
+  color: var(--paper-cream);
+  border: 2.5px solid var(--paper-cream);
+  box-shadow: 9px 9px 0 var(--paper-cream);
+  padding: 2.25rem;
+  transform: rotate(0.6deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.tape-sig {
+  top: -13px;
+  right: 32px;
+  transform: rotate(4deg);
+}
+
+.author-display-name {
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin: 0 0 0.35rem;
+  color: var(--paper-aged);
+}
+
+.hand-signature-box {
+  display: inline-flex;
+  flex-direction: column;
+}
+
+.hand-sig-script {
+  font-family: var(--font-hand);
+  font-size: clamp(2.3rem, 3.4vw, 3rem);
+  color: var(--ignite-orange);
+  line-height: 1.05;
+  transform: rotate(-2deg);
+}
+
+.sig-underline {
+  width: 170px;
+  height: 18px;
+}
+
+.colophon-actions {
+  display: flex;
+}
+
+.back-top-btn {
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  padding: 0.7rem 1.25rem;
+  background-color: var(--ignite-orange);
+  color: var(--paper-ivory);
+  border: 2px solid var(--paper-ivory);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.back-top-btn:hover {
+  background-color: var(--paper-cream);
+  color: var(--ink-navy);
+}
+
+@media (max-width: 1024px) {
+  .summary-triptych,
+  .colophon-dual-grid {
+    grid-template-columns: 1fr;
+  }
+}

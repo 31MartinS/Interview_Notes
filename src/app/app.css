@@ -1,0 +1,78 @@
+.zine-main {
+  position: relative;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.spread-rail {
+  position: fixed;
+  right: 1.25rem;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 900;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.55rem;
+  background-color: rgba(246, 241, 230, 0.94);
+  border: 2px solid var(--ink-navy);
+  box-shadow: 4px 4px 0 var(--ink-navy);
+  padding: 0.6rem 0.4rem;
+  backdrop-filter: blur(6px);
+}
+
+.rail-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: 0.55rem;
+  color: var(--ink-navy);
+  border-bottom: 1.5px dashed var(--ink-navy);
+  padding-bottom: 0.35rem;
+  line-height: 1.2;
+}
+
+.rail-header strong {
+  font-size: 0.62rem;
+  color: var(--ignite-orange);
+}
+
+.rail-dots {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.rail-dot-btn {
+  width: 28px;
+  height: 24px;
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  font-weight: 700;
+  border: 1.5px solid var(--ink-navy);
+  background-color: var(--paper-ivory);
+  color: var(--ink-navy);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  transition: all 0.18s ease;
+}
+
+.rail-dot-btn:hover {
+  background-color: var(--paper-aged);
+}
+
+.rail-dot-btn.active {
+  background-color: var(--ignite-orange);
+  color: var(--paper-ivory);
+  transform: scale(1.08);
+}
+
+@media (max-width: 1280px) {
+  .spread-rail {
+    display: none;
+  }
+}

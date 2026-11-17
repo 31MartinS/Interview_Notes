@@ -1,0 +1,79 @@
+<section class="connect-spread editorial-grid-navy">
+  <div class="connect-container">
+    <!-- Section Title with Generous Negative Space -->
+    <div class="spread-header">
+      <span class="giant-num">{{ i18n.t().connect.number }}</span>
+      <h2 class="section-display-title">{{ i18n.t().connect.title }}</h2>
+    </div>
+
+    <!-- Main Asymmetric Editorial Grid -->
+    <div class="connect-editorial-grid">
+      <!-- Left Column: Protagonist Regional Collage Composition -->
+      <div class="cartography-collage-board">
+        <div class="masking-tape-orange tape-board-top"></div>
+
+        <div class="map-canvas">
+          <!-- Minimalist Editorial Thread Lines -->
+          <svg class="network-svg" viewBox="0 0 600 400" fill="none" aria-hidden="true">
+            <ellipse cx="300" cy="200" rx="235" ry="145" stroke="rgba(246,241,230,0.14)" stroke-width="1" stroke-dasharray="6 6" />
+            <ellipse cx="300" cy="200" rx="145" ry="88" stroke="rgba(255,84,22,0.28)" stroke-width="1.5" stroke-dasharray="4 4" />
+            <path d="M 120 115 L 465 275" stroke="#FF5416" stroke-width="2" stroke-dasharray="6 5" />
+          </svg>
+
+          <!-- Primary Cutout Photograph -->
+          <figure
+            class="cutout-polaroid polaroid-left group"
+            [class.focused]="selectedNodeIndex() === 0 || selectedNodeIndex() === 1"
+            (click)="selectNode(0)">
+            <div class="pin-head"></div>
+            <img
+              src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=750&q=80"
+              [alt]="i18n.t().connect.photo1Caption"
+              class="photocopy-img-dark"
+              loading="lazy" />
+            <figcaption>{{ i18n.t().connect.photo1Caption }}</figcaption>
+          </figure>
+
+          <!-- Secondary Cutout Photograph -->
+          <figure
+            class="cutout-polaroid polaroid-right group"
+            [class.focused]="selectedNodeIndex() === 2"
+            (click)="selectNode(2)">
+            <div class="pin-head pin-orange"></div>
+            <img
+              src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=700&q=80"
+              [alt]="i18n.t().connect.photo2Caption"
+              class="photocopy-img-dark"
+              loading="lazy" />
+            <figcaption>{{ i18n.t().connect.photo2Caption }}</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <!-- Right Column: Core Learning Card & Key Facets -->
+      <div class="connect-dossier-col">
+        <article class="manifesto-paper-card clip-irregular-2">
+          <div class="masking-tape tape-manifesto"></div>
+          <p class="manifesto-body">{{ i18n.t().connect.body }}</p>
+        </article>
+
+        <!-- 3 Focused Facets from Learning 01 -->
+        <div class="highlights-list">
+          @for (item of i18n.t().connect.highlights; track item.id; let idx = $index) {
+            <button
+              type="button"
+              class="highlight-card-btn"
+              [class.active]="selectedNodeIndex() === idx"
+              (click)="selectNode(idx)">
+              <span class="hl-num">0{{ idx + 1 }}</span>
+              <div class="hl-text">
+                <strong>{{ item.label }}</strong>
+                <span>{{ item.caption }}</span>
+              </div>
+            </button>
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

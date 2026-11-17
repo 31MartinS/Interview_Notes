@@ -1,0 +1,95 @@
+{
+  "nav": {
+    "hero": "START",
+    "learning1": "REGIONAL REACH",
+    "learning2": "OPEN SOURCE & OPEN SCIENCE",
+    "learning3": "CLIENT EXPERIENCE",
+    "closing": "CLOSING",
+    "menu": "MENU",
+    "close": "CLOSE"
+  },
+  "hero": {
+    "title": "What I Learned About IGNITE",
+    "ctaStart": "EXPLORE LEARNINGS",
+    "collageCaption1": "Educational and scientific collaboration",
+    "collageCaption2": "Open knowledge and technology"
+  },
+  "connect": {
+    "number": "01",
+    "title": "REGIONAL REACH",
+    "body": "Ignite has a regional presence and reach. Rather than working solely with clients from a single country, it collaborates with diverse organizations, especially within the educational and scientific sectors, adapting its solutions to different clients and contexts.",
+    "highlights": [
+      {
+        "id": "presencia",
+        "label": "Regional presence",
+        "caption": "Collaboration extending beyond a single country"
+      },
+      {
+        "id": "sectores",
+        "label": "Educational and scientific sector",
+        "caption": "Working alongside diverse organizations"
+      },
+      {
+        "id": "adaptacion",
+        "label": "Tailored solutions",
+        "caption": "Adapted to different clients and contexts"
+      }
+    ],
+    "photo1Caption": "Collaboration with educational and scientific organizations",
+    "photo2Caption": "Solutions adapted to multiple regional contexts"
+  },
+  "open": {
+    "number": "02",
+    "title": "OPEN SOURCE SOFTWARE AND OPEN SCIENCE",
+    "body": "Ignite is committed to open source software and open science. It works with platforms built on technologies such as Angular and Laravel, promoting access, management, and dissemination of scientific knowledge through technological tools.",
+    "highlights": [
+      {
+        "id": "codigo",
+        "label": "Open source and open science",
+        "caption": "Commitment to open technological platforms"
+      },
+      {
+        "id": "tecnologias",
+        "label": "Angular and Laravel",
+        "caption": "Platforms developed with modern technologies"
+      },
+      {
+        "id": "conocimiento",
+        "label": "Scientific knowledge",
+        "caption": "Access, management, and dissemination through technology"
+      }
+    ],
+    "photo1Caption": "Management and dissemination of scientific knowledge",
+    "photo2Caption": "Platforms built with Angular and Laravel"
+  },
+  "empower": {
+    "number": "03",
+    "title": "COMPREHENSIVE CLIENT EXPERIENCE",
+    "body": "Ignite's work goes beyond software development. It also encompasses guidance, training, technical support, and client communication, alongside marketing, outreach, and showcasing solutions through webinars.",
+    "highlights": [
+      {
+        "id": "acompanamiento",
+        "label": "Guidance and training",
+        "caption": "Close support and client enablement"
+      },
+      {
+        "id": "soporte",
+        "label": "Technical support and communication",
+        "caption": "Ongoing assistance and direct dialogue"
+      },
+      {
+        "id": "divulgacion",
+        "label": "Marketing and webinars",
+        "caption": "Outreach and presentation of solutions"
+      }
+    ],
+    "photo1Caption": "Guidance, training, and solution presentations",
+    "photo2Caption": "Technical support, communication, and webinars"
+  },
+  "closing": {
+    "gratitudeTitle": "Special thanks to Laura",
+    "gratitudeText": "Thank you to Laura for sharing this conversation and offering a closer look into Ignite's work.",
+    "signatureAuthor": "By:",
+    "backToTop": "BACK TO TOP"
+  }
+}

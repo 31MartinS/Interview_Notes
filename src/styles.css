@@ -1,0 +1,251 @@
+:root {
+  --ink-navy: #0B132B;
+  --cobalt-dark: #132247;
+  --blueprint-blue: #1B3168;
+  --ignite-orange: #FF5416;
+  --orange-soft: #FF7742;
+  --paper-cream: #F6F1E6;
+  --paper-aged: #EAE1CE;
+  --paper-ivory: #FFFDF8;
+  --ink-muted: #3A4664;
+
+  --font-display: 'Anton', 'Syne', 'Impact', sans-serif;
+  --font-syne: 'Syne', 'Plus Jakarta Sans', sans-serif;
+  --font-serif: 'Instrument Serif', Georgia, serif;
+  --font-mono: 'Space Mono', 'Courier New', monospace;
+  --font-hand: 'Caveat', 'Comic Sans MS', cursive;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--paper-cream);
+  color: var(--ink-navy);
+  font-family: var(--font-sans);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--paper-cream);
+  color: var(--ink-navy);
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* ==========================================================================
+   EDITORIAL PAPER, GRAIN & PHOTOCOPY TEXTURES
+   ========================================================================== */
+
+.paper-grain-overlay {
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  opacity: 0.055;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+.halftone-dots {
+  background-image: radial-gradient(rgba(11, 19, 43, 0.16) 1.25px, transparent 1.25px);
+  background-size: 14px 14px;
+}
+
+.halftone-dots-orange {
+  background-image: radial-gradient(rgba(255, 84, 22, 0.28) 1.5px, transparent 1.5px);
+  background-size: 12px 12px;
+}
+
+.halftone-dots-light {
+  background-image: radial-gradient(rgba(246, 241, 230, 0.14) 1.25px, transparent 1.25px);
+  background-size: 16px 16px;
+}
+
+.editorial-grid-cream {
+  background-color: var(--paper-cream);
+  background-image:
+    linear-gradient(to right, rgba(11, 19, 43, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(11, 19, 43, 0.06) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.editorial-grid-navy {
+  background-color: var(--ink-navy);
+  background-image:
+    linear-gradient(to right, rgba(246, 241, 230, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(246, 241, 230, 0.06) 1px, transparent 1px);
+  background-size: 44px 44px;
+}
+
+/* ==========================================================================
+   COLLAGE / MIXED-MEDIA ELEMENTS: TAPE, CUTOUTS, STAMPS, TORN EDGES
+   ========================================================================== */
+
+.masking-tape {
+  position: absolute;
+  width: 115px;
+  height: 30px;
+  background: rgba(238, 228, 202, 0.86);
+  border-left: 2px dashed rgba(11, 19, 43, 0.18);
+  border-right: 2px dashed rgba(11, 19, 43, 0.18);
+  box-shadow: 0 2px 6px rgba(11, 19, 43, 0.14);
+  backdrop-filter: blur(2px);
+  z-index: 20;
+}
+
+.masking-tape-orange {
+  position: absolute;
+  width: 120px;
+  height: 28px;
+  background: rgba(255, 84, 22, 0.88);
+  border-left: 2px dashed rgba(255, 253, 248, 0.35);
+  border-right: 2px dashed rgba(255, 253, 248, 0.35);
+  box-shadow: 0 3px 8px rgba(11, 19, 43, 0.25);
+  z-index: 20;
+}
+
+.paper-cutout-shadow {
+  box-shadow: 8px 8px 0px var(--ink-navy);
+  border: 2px solid var(--ink-navy);
+  transition: transform 0.28s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.paper-cutout-shadow:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 12px 12px 0px var(--ignite-orange);
+}
+
+.paper-cutout-cream-shadow {
+  box-shadow: 8px 8px 0px var(--ignite-orange);
+  border: 2px solid var(--paper-cream);
+  transition: transform 0.28s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.paper-cutout-cream-shadow:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 12px 12px 0px var(--paper-cream);
+}
+
+/* Photocopy / Risograph Duotone Image Treatment */
+.photocopy-img {
+  filter: grayscale(100%) contrast(135%) brightness(96%);
+  mix-blend-mode: multiply;
+  transition: filter 0.45s ease, transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.group:hover .photocopy-img,
+.photocopy-img:hover {
+  filter: grayscale(15%) contrast(115%) brightness(102%);
+}
+
+.photocopy-img-dark {
+  filter: grayscale(100%) contrast(140%) brightness(92%);
+  transition: filter 0.45s ease, transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.group:hover .photocopy-img-dark,
+.photocopy-img-dark:hover {
+  filter: grayscale(10%) contrast(115%) brightness(105%);
+}
+
+/* Torn Paper Polygon Clip Paths */
+.clip-irregular-1 {
+  clip-path: polygon(1% 2%, 98% 0%, 100% 97%, 95% 100%, 0% 98%, 2% 48%);
+}
+
+.clip-irregular-2 {
+  clip-path: polygon(0% 1%, 99% 3%, 97% 99%, 2% 97%);
+}
+
+/* Editorial Ink Stamp */
+.ink-stamp {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.3rem 0.75rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border: 2px solid currentColor;
+  border-radius: 2px;
+  position: relative;
+  transform: rotate(-3deg);
+}
+
+/* Editorial Sticker */
+.zine-sticker {
+  display: inline-block;
+  background-color: var(--ignite-orange);
+  color: var(--paper-ivory);
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  padding: 0.4rem 0.85rem;
+  border: 2px solid var(--ink-navy);
+  box-shadow: 4px 4px 0px var(--ink-navy);
+  text-transform: uppercase;
+}
+
+/* Marquee Animation */
+@keyframes marqueeScroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marqueeScroll 28s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Subtle Floating Animation for Collage Layers */
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px) rotate(-2deg);
+  }
+  50% {
+    transform: translateY(-7px) rotate(-1deg);
+  }
+}
+
+.animate-float-slow {
+  animation: floatSlow 6s ease-in-out infinite;
+}
+
+/* Fallback layout helpers in case CDN is offline */
+.font-display { font-family: var(--font-display); }
+.font-syne { font-family: var(--font-syne); }
+.font-serif-editorial { font-family: var(--font-serif); }
+.font-mono-code { font-family: var(--font-mono); }
+.font-handwritten { font-family: var(--font-hand); }
+.font-body { font-family: var(--font-sans); }
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--ink-navy);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--ignite-orange);
+  border: 2px solid var(--ink-navy);
+}

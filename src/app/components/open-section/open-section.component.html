@@ -1,0 +1,63 @@
+<section class="open-spread">
+  <div class="open-container">
+    <!-- Section Header with Generous Negative Space -->
+    <div class="open-header">
+      <span class="open-num-pill">{{ i18n.t().open.number }}</span>
+      <h2 class="open-giant-title">{{ i18n.t().open.title }}</h2>
+    </div>
+
+    <!-- Main Editorial Spread: Left Core Learning & Highlights + Right Focused Collage -->
+    <div class="open-main-grid">
+      <!-- Left Column: Core Text & 3 Facets -->
+      <div class="open-layers-col">
+        <article class="open-manifesto-box paper-cutout-shadow">
+          <div class="masking-tape tape-open-manifesto"></div>
+          <p class="open-manifesto-body">{{ i18n.t().open.body }}</p>
+        </article>
+
+        <div class="layers-stack">
+          @for (item of i18n.t().open.highlights; track item.id; let idx = $index) {
+          <button type="button" class="layer-specimen-card" [class.expanded]="activeLayerIndex() === idx"
+            (click)="selectLayer(idx)">
+            <span class="layer-index-badge">0{{ idx + 1 }}</span>
+            <div class="layer-titles">
+              <strong class="layer-title">{{ item.label }}</strong>
+              <span class="layer-sub">{{ item.caption }}</span>
+            </div>
+          </button>
+          }
+        </div>
+      </div>
+
+      <!-- Right Column: Protagonist Open Science & Software Collage -->
+      <div class="open-collage-col">
+        <div class="science-collage-frame halftone-dots">
+          <svg class="science-diagram-svg" viewBox="0 0 500 440" fill="none" aria-hidden="true">
+            <circle cx="250" cy="220" r="165" stroke="currentColor" stroke-width="1.5" stroke-dasharray="8 6"
+              opacity="0.22" />
+            <circle cx="250" cy="220" r="105" stroke="#FF5416" stroke-width="1.5" opacity="0.35" />
+            <line x1="40" y1="220" x2="460" y2="220" stroke="currentColor" stroke-width="1" opacity="0.15" />
+          </svg>
+
+          <!-- Cutout Photo 1: Scientific Knowledge -->
+          <figure class="open-photo-card photo-science group"
+            [class.focused]="activeLayerIndex() === 0 || activeLayerIndex() === 2" (click)="selectLayer(0)">
+            <div class="masking-tape-orange tape-sci-1"></div>
+            <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=750&q=80"
+              [alt]="i18n.t().open.photo1Caption" class="photocopy-img" loading="lazy" />
+            <figcaption>{{ i18n.t().open.photo1Caption }}</figcaption>
+          </figure>
+
+          <!-- Cutout Photo 2: Platforms with Angular & Laravel -->
+          <figure class="open-photo-card photo-code group" [class.focused]="activeLayerIndex() === 1"
+            (click)="selectLayer(1)">
+            <div class="masking-tape tape-sci-2"></div>
+            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=700&q=80"
+              [alt]="i18n.t().open.photo2Caption" class="photocopy-img" loading="lazy" />
+            <figcaption>{{ i18n.t().open.photo2Caption }}</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

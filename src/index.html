@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="es" class="scroll-smooth">
+
+<head>
+  <meta charset="utf-8">
+  <title>IGNITE | Lo que aprendí</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description"
+    content="IGNITE | What I Learned: Three things I discovered about Ignite. Interactive mixed-media editorial zine built with Angular & TypeScript.">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- Editorial & Zine Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Anton&family=Caveat:wght@600;700&family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Tailwind CSS Play CDN + Custom Editorial Theme Config -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'ignite-navy': '#0B132B',
+            'ignite-cobalt': '#132247',
+            'ignite-blueprint': '#1B3168',
+            'ignite-orange': '#FF5416',
+            'ignite-orange-light': '#FF7742',
+            'ignite-cream': '#F6F1E6',
+            'ignite-paper': '#EAE1CE',
+            'ignite-ivory': '#FFFDF8'
+          },
+          fontFamily: {
+            display: ['Anton', 'Syne', 'Impact', 'sans-serif'],
+            syne: ['Syne', 'sans-serif'],
+            serif: ['Instrument Serif', 'Georgia', 'serif'],
+            mono: ['Space Mono', 'monospace'],
+            hand: ['Caveat', 'cursive'],
+            sans: ['Plus Jakarta Sans', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body
+  class="bg-ignite-cream text-ignite-navy antialiased selection:bg-ignite-orange selection:text-white overflow-x-hidden">
+  <app-root></app-root>
+</body>
+
+</html>

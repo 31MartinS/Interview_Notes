@@ -1,0 +1,69 @@
+<section class="empower-spread">
+  <div class="empower-container">
+    <!-- Section Header with Generous Negative Space -->
+    <div class="empower-poster-header">
+      <span class="empower-giant-num">{{ i18n.t().empower.number }}</span>
+      <h2 class="empower-display-title">{{ i18n.t().empower.title }}</h2>
+    </div>
+
+    <!-- Main Asymmetric Grid -->
+    <div class="empower-matrix-grid">
+      <!-- Left: Protagonist Visual Collage Poster -->
+      <div class="empower-visual-poster">
+        <div class="poster-frame halftone-dots-orange">
+          <!-- Primary Cutout Photo -->
+          <figure
+            class="empower-photo-card photo-emp-1 group"
+            [class.focused]="selectedDiscipline() === 0 || selectedDiscipline() === 2"
+            (click)="selectDiscipline(0)">
+            <div class="masking-tape tape-emp-1"></div>
+            <img
+              src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80"
+              [alt]="i18n.t().empower.photo1Caption"
+              class="photocopy-img"
+              loading="lazy" />
+            <figcaption>{{ i18n.t().empower.photo1Caption }}</figcaption>
+          </figure>
+
+          <!-- Secondary Cutout Photo -->
+          <figure
+            class="empower-photo-card photo-emp-2 group"
+            [class.focused]="selectedDiscipline() === 1"
+            (click)="selectDiscipline(1)">
+            <div class="masking-tape-orange tape-emp-2"></div>
+            <img
+              src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=700&q=80"
+              [alt]="i18n.t().empower.photo2Caption"
+              class="photocopy-img"
+              loading="lazy" />
+            <figcaption>{{ i18n.t().empower.photo2Caption }}</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <!-- Right: Core Learning Card & 3 Facets -->
+      <div class="empower-content-col">
+        <article class="empower-manifesto-card">
+          <div class="masking-tape-orange tape-emp-top"></div>
+          <p class="empower-manifesto-body">{{ i18n.t().empower.body }}</p>
+        </article>
+
+        <div class="disciplines-stack">
+          @for (item of i18n.t().empower.highlights; track item.id; let idx = $index) {
+            <button
+              type="button"
+              class="discipline-cutout-card"
+              [class.focused]="selectedDiscipline() === idx"
+              (click)="selectDiscipline(idx)">
+              <span class="disc-num">0{{ idx + 1 }}</span>
+              <div class="disc-text">
+                <strong class="disc-name">{{ item.label }}</strong>
+                <span class="disc-desc">{{ item.caption }}</span>
+              </div>
+            </button>
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

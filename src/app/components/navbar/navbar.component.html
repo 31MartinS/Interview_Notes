@@ -1,0 +1,60 @@
+<header class="editorial-header">
+  <!-- Reading Progress Bar -->
+  <div class="progress-track">
+    <div class="progress-fill" [style.width.%]="scrollProgress"></div>
+  </div>
+
+  <!-- Main Editorial Navigation Bar -->
+  <nav class="masthead-nav" aria-label="Main Navigation">
+    <div class="nav-container">
+      <!-- Brand Stamp -->
+      <button type="button" class="brand-stamp" (click)="onSelectSection('hero')">
+        <span class="brand-badge">Interview</span>
+      </button>
+
+      <!-- Desktop Section Links -->
+      <div class="nav-links">
+        @for (sec of sections; track sec.id) {
+        <button type="button" class="nav-pill" [class.active]="activeSection === sec.id"
+          (click)="onSelectSection(sec.id)">
+          <span class="pill-indicator"></span>
+          <span class="pill-label">{{ getSectionLabel(sec.id) }}</span>
+        </button>
+        }
+      </div>
+
+      <!-- Language Selector (ES / EN) + Mobile Menu Trigger -->
+      <div class="nav-actions">
+        <div class="lang-switcher" role="group" aria-label="ES / EN">
+          <button type="button" class="lang-btn" [class.active]="i18n.currentLang() === 'es'"
+            (click)="onSwitchLanguage('es')" [attr.aria-pressed]="i18n.currentLang() === 'es'">
+            ES
+          </button>
+          <span class="lang-slash">/</span>
+          <button type="button" class="lang-btn" [class.active]="i18n.currentLang() === 'en'"
+            (click)="onSwitchLanguage('en')" [attr.aria-pressed]="i18n.currentLang() === 'en'">
+            EN
+          </button>
+        </div>
+
+        <button type="button" class="mobile-toggle" (click)="toggleMobileMenu()"
+          [attr.aria-expanded]="mobileMenuOpen()">
+          {{ mobileMenuOpen() ? i18n.t().nav.close : i18n.t().nav.menu }}
+        </button>
+      </div>
+    </div>
+
+    @if (mobileMenuOpen()) {
+    <div class="mobile-drawer">
+      <div class="mobile-drawer-inner">
+        @for (sec of sections; track sec.id) {
+        <button type="button" class="mobile-nav-item" [class.active]="activeSection === sec.id"
+          (click)="onSelectSection(sec.id)">
+          <span>{{ getSectionLabel(sec.id) }}</span>
+        </button>
+        }
+      </div>
+    </div>
+    }
+  </nav>
+</header>

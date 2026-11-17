@@ -1,0 +1,261 @@
+.open-spread {
+  position: relative;
+  background-color: var(--paper-cream);
+  color: var(--ink-navy);
+  background-image:
+    linear-gradient(to right, rgba(11, 19, 43, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(11, 19, 43, 0.06) 1px, transparent 1px);
+  background-size: 36px 36px;
+  padding: clamp(4.5rem, 6vw, 7rem) 0;
+  border-bottom: 4px solid var(--ink-navy);
+}
+
+.open-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 clamp(1.5rem, 4vw, 4.5rem);
+}
+
+@media (min-width: 1281px) {
+  .open-container {
+    padding-right: 5.5rem;
+  }
+}
+
+.open-header {
+  display: flex;
+  align-items: baseline;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  padding-bottom: 2.25rem;
+  border-bottom: 2.5px solid var(--ink-navy);
+  margin-bottom: 3.5rem;
+}
+
+.open-num-pill {
+  background-color: var(--ignite-orange);
+  color: var(--paper-ivory);
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 3.8vw, 3.2rem);
+  padding: 0.1rem 0.85rem;
+  border: 2.5px solid var(--ink-navy);
+  box-shadow: 4px 4px 0 var(--ink-navy);
+  line-height: 1;
+}
+
+.open-giant-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 4.4vw, 4rem);
+  line-height: 0.98;
+  margin: 0;
+  letter-spacing: 0.02em;
+}
+
+.open-main-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  gap: clamp(2.5rem, 4vw, 4.25rem);
+  align-items: center;
+}
+
+.open-layers-col {
+  display: flex;
+  flex-direction: column;
+  gap: 1.85rem;
+  min-width: 0;
+}
+
+.open-manifesto-box {
+  position: relative;
+  background-color: var(--paper-ivory);
+  color: var(--ink-navy);
+  padding: clamp(1.65rem, 2.5vw, 2.35rem);
+}
+
+.tape-open-manifesto {
+  top: -14px;
+  left: 36px;
+  transform: rotate(-3deg);
+}
+
+.open-manifesto-body {
+  font-size: clamp(1.05rem, 1.25vw, 1.22rem);
+  line-height: 1.72;
+  color: var(--ink-navy);
+  font-weight: 500;
+  margin: 0;
+}
+
+.layers-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.layer-specimen-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: var(--paper-ivory);
+  color: var(--ink-navy);
+  border: 2px solid var(--ink-navy);
+  box-shadow: 5px 5px 0 var(--ink-navy);
+  padding: 1rem 1.25rem;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.22s ease;
+}
+
+.layer-specimen-card:hover,
+.layer-specimen-card.expanded {
+  transform: translate(-3px, -3px);
+  box-shadow: 8px 8px 0 var(--ignite-orange);
+  background-color: #ffffff;
+}
+
+.layer-index-badge {
+  background-color: var(--ink-navy);
+  color: var(--paper-ivory);
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  padding: 0.2rem 0.55rem;
+  flex-shrink: 0;
+}
+
+.layer-specimen-card.expanded .layer-index-badge {
+  background-color: var(--ignite-orange);
+}
+
+.layer-titles {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.layer-title {
+  font-family: var(--font-syne);
+  font-size: 1.02rem;
+  font-weight: 800;
+}
+
+.layer-sub {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--ink-muted);
+}
+
+/* ==========================================================================
+   RIGHT COLUMN: PROTAGONIST COLLAGE
+   ========================================================================== */
+
+.open-collage-col {
+  min-width: 0;
+}
+
+.science-collage-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 6 / 5;
+  min-height: 460px;
+  background-color: var(--paper-aged);
+  color: var(--ink-navy);
+  border: 3px solid var(--ink-navy);
+  box-shadow: 10px 10px 0 var(--ink-navy);
+  padding: 1.35rem;
+  overflow: hidden;
+}
+
+.science-diagram-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.open-photo-card {
+  position: absolute;
+  width: 55%;
+  max-width: 330px;
+  margin: 0;
+  background-color: var(--paper-ivory);
+  border: 2.5px solid var(--ink-navy);
+  box-shadow: 7px 7px 0 var(--ink-navy);
+  padding: 0.6rem;
+  z-index: 4;
+  cursor: pointer;
+  transition: transform 0.28s ease, box-shadow 0.28s ease;
+}
+
+.open-photo-card img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  display: block;
+  border: 1.5px solid var(--ink-navy);
+}
+
+.open-photo-card figcaption {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding-top: 0.45rem;
+  color: var(--ink-navy);
+}
+
+.photo-science {
+  top: 5%;
+  left: 4%;
+  transform: rotate(-2.5deg);
+}
+
+.photo-code {
+  bottom: 5%;
+  right: 4%;
+  transform: rotate(2.5deg);
+  z-index: 5;
+}
+
+.open-photo-card:hover,
+.open-photo-card.focused {
+  transform: scale(1.03) rotate(0deg);
+  box-shadow: 9px 9px 0 var(--ignite-orange);
+  z-index: 8;
+}
+
+.tape-sci-1 {
+  top: -13px;
+  left: 35%;
+}
+
+.tape-sci-2 {
+  top: -13px;
+  right: 25px;
+}
+
+@media (max-width: 1024px) {
+  .open-main-grid {
+    grid-template-columns: 1fr;
+    gap: 2.75rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .science-collage-frame {
+    min-height: 0;
+    aspect-ratio: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .open-photo-card {
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    width: 100%;
+    max-width: none;
+  }
+}
